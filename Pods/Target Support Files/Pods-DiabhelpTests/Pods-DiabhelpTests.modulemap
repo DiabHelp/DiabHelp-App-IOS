@@ -1,0 +1,6 @@
+framework module Pods_DiabhelpTests {
+  umbrella header "Pods-DiabhelpTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
