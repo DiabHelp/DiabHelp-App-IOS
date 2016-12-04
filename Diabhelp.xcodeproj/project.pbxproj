@@ -17,7 +17,7 @@
 		C60AEACE1DDF1690005766B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60AEACC1DDF1690005766B4 /* LaunchScreen.storyboard */; };
 		C60AEAD91DDF1690005766B4 /* DiabhelpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60AEAD81DDF1690005766B4 /* DiabhelpTests.swift */; };
 		C60AEAE41DDF1690005766B4 /* DiabhelpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60AEAE31DDF1690005766B4 /* DiabhelpUITests.swift */; };
-		C6EB6B211DF1A341005E952B /* APIRequester.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6EB6B1F1DF1A341005E952B /* APIRequester.xcdatamodeld */; };
+		C6EB6B271DF1D0E3005E952B /* ApiConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6EB6B261DF1D0E3005E952B /* ApiConnector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +71,7 @@
 		C60AEADF1DDF1690005766B4 /* DiabhelpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiabhelpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60AEAE31DDF1690005766B4 /* DiabhelpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabhelpUITests.swift; sourceTree = "<group>"; };
 		C60AEAE51DDF1690005766B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6EB6B201DF1A341005E952B /* APIRequester.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = APIRequester.xcdatamodel; sourceTree = "<group>"; };
+		C6EB6B261DF1D0E3005E952B /* ApiConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConnector.swift; sourceTree = "<group>"; };
 		DB40D069BCDEBF2750049C5C /* Pods-DiabhelpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiabhelpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiabhelpTests/Pods-DiabhelpTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EAF9B9F9348D2B091530FBEF /* Pods-DiabhelpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiabhelpUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiabhelpUITests/Pods-DiabhelpUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,7 +148,7 @@
 				C60AEACA1DDF1690005766B4 /* Assets.xcassets */,
 				C60AEACC1DDF1690005766B4 /* LaunchScreen.storyboard */,
 				C60AEACF1DDF1690005766B4 /* Info.plist */,
-				C6EB6B1F1DF1A341005E952B /* APIRequester.xcdatamodeld */,
+				C6EB6B261DF1D0E3005E952B /* ApiConnector.swift */,
 			);
 			path = Diabhelp;
 			sourceTree = "<group>";
@@ -465,8 +465,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60AEAC31DDF1690005766B4 /* ViewController.swift in Sources */,
+				C6EB6B271DF1D0E3005E952B /* ApiConnector.swift in Sources */,
 				C60AEAC11DDF1690005766B4 /* AppDelegate.swift in Sources */,
-				C6EB6B211DF1A341005E952B /* APIRequester.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,19 +737,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		C6EB6B1F1DF1A341005E952B /* APIRequester.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				C6EB6B201DF1A341005E952B /* APIRequester.xcdatamodel */,
-			);
-			currentVersion = C6EB6B201DF1A341005E952B /* APIRequester.xcdatamodel */;
-			path = APIRequester.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = C60AEAB51DDF1690005766B4 /* Project object */;
 }

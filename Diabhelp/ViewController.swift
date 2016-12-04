@@ -44,7 +44,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func login(_ sender: UIButton) {
         print("valeurs des champs : \n email: \(emailField.text) \n pwd: \(pwdField.text)")
-        
+        let api: ApiConnector = ApiConnector()
+        let url: String = api.getServerUrl(state: .Prod).replacingOccurrences(of: "/api", with: "") + "rest-login"
+        print("url = " + url)
+        if let login = emailField.text, let pwd = pwdField.text {
+            let parameters: Parameters = ["username": login, "password": pwd]
+            Alamofire.request(url, method: .post, parameters: parameters).validate()
+                .responseJSON { response in
+                    debugPrint(response)
+            }
+            
+        }
         
     }
     
